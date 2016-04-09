@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://schemas.clkio.com"
+	xmlns:common="http://schemas.clkio.com/common"
+	xmlns:user="http://schemas.clkio.com/user"
+	xmlns:login="http://schemas.clkio.com/login"
+	xmlns:email="http://schemas.clkio.com/email"
+	xmlns:profile="http://schemas.clkio.com/profile"
+	xmlns:adjusting="http://schemas.clkio.com/adjusting"
+	xmlns:reason="http://schemas.clkio.com/reason"
+	xmlns:timecard="http://schemas.clkio.com/timecard"
+	xmlns:resetpassword="http://schemas.clkio.com/resetpassword"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:import namespace="http://schemas.clkio.com/common" schemaLocation="http://schemas.clkio.com/common.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/user" schemaLocation="http://schemas.clkio.com/user.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/login" schemaLocation="http://schemas.clkio.com/login.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/email" schemaLocation="http://schemas.clkio.com/email.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/profile" schemaLocation="http://schemas.clkio.com/profile.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/adjusting" schemaLocation="http://schemas.clkio.com/adjusting.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/reason" schemaLocation="http://schemas.clkio.com/reason.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/timecard" schemaLocation="http://schemas.clkio.com/timecard.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/resetpassword" schemaLocation="http://schemas.clkio.com/resetpassword.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/clockinclockout" schemaLocation="http://schemas.clkio.com/clockinclockout.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/day" schemaLocation="http://schemas.clkio.com/day.xsd" />
+	<xs:import namespace="http://schemas.clkio.com/manualentering" schemaLocation="http://schemas.clkio.com/manualentering.xsd" />
+</xs:schema>
