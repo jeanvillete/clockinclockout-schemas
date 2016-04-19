@@ -10,11 +10,38 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name="responseException">
+	<xs:complexType name="responseFault">
 		<xs:sequence>
-			<xs:element name="info" type="xs:string" maxOccurs="1" minOccurs="1" />
-			<xs:element name="message" type="xs:string" maxOccurs="1" minOccurs="1"/>
+			<xs:element name="statusCode" type="xs:string" maxOccurs="1" minOccurs="1" />
 		</xs:sequence>
+	</xs:complexType>
+
+	<!-- 400 BAD REQUEST  -->
+	<xs:complexType name="badRequestFault">
+		<xs:complexContent>
+			<xs:extension base="common:responseFault"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- 401 UNAUTHORIZED -->
+	<xs:complexType name="unauthorizedFault">
+		<xs:complexContent>
+			<xs:extension base="common:responseFault"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- 409 CONFLICT -->
+	<xs:complexType name="conflictFault">
+		<xs:complexContent>
+			<xs:extension base="common:responseFault"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- 403 FORBIDDEN -->
+	<xs:complexType name="forbiddenFault">
+		<xs:complexContent>
+			<xs:extension base="common:responseFault"/>
+		</xs:complexContent>
 	</xs:complexType>
 
 </xs:schema>
