@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://schemas.clkio.com/common"
+	xmlns:common="http://schemas.clkio.com/common"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	attributeFormDefault="qualified"
 	elementFormDefault="qualified">
