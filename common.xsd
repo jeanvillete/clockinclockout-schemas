@@ -45,4 +45,11 @@
 		</xs:complexContent>
 	</xs:complexType>
 
+	<!-- 500 INTERNAL SERVER ERROR -->
+	<xs:complexType name="internalServerError">
+		<xs:complexContent>
+			<xs:extension base="common:responseFault"/>
+		</xs:complexContent>
+	</xs:complexType>
+
 </xs:schema>
