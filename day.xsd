@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://schemas.clkio.com/day"
 	xmlns:day="http://schemas.clkio.com/day"
+	xmlns:common="http://schemas.clkio.com/common"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	attributeFormDefault="qualified"
 	elementFormDefault="qualified">
-	
+
+	<xs:import namespace="http://schemas.clkio.com/common" schemaLocation="http://schemas.clkio.com/common.xsd" />
+
 	<xs:complexType name="day">
 		<xs:sequence>
 			<xs:element name="date" type="xs:string" maxOccurs="1" minOccurs="1" />
@@ -15,6 +18,10 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name="dayEntering"/>
-		
+	<xs:complexType name="dayEntering">
+		<xs:complexContent>
+			<xs:extension base="common:commonDomain"/>
+		</xs:complexContent>
+	</xs:complexType>
+
 </xs:schema>

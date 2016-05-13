@@ -6,17 +6,20 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	attributeFormDefault="qualified"
 	elementFormDefault="qualified">
-	
+
 	<xs:import namespace="http://schemas.clkio.com/common" schemaLocation="http://schemas.clkio.com/common.xsd" />
 	<xs:import namespace="http://schemas.clkio.com/profile" schemaLocation="http://schemas.clkio.com/profile.xsd" />
 
 	<xs:complexType name="adjusting">
-		<xs:sequence>
-			<xs:element name="id" type="xs:integer" maxOccurs="1" minOccurs="1" />
-			<xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="1" />
-			<xs:element name="timeInterval" type="xs:string" maxOccurs="1" minOccurs="1" />
-			<xs:element name="profile" type="profile:profile" maxOccurs="1" minOccurs="1" nillable="true"/>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="common:commonDomain">
+				<xs:sequence>
+					<xs:element name="description" type="xs:string" maxOccurs="1" minOccurs="1" />
+					<xs:element name="timeInterval" type="xs:string" maxOccurs="1" minOccurs="1" />
+					<xs:element name="profile" type="profile:profile" maxOccurs="1" minOccurs="1" nillable="true"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 
 	<xs:complexType name="listAdjustingRequest">
@@ -24,7 +27,7 @@
 			<xs:element name="profile" type="profile:profile" maxOccurs="1" minOccurs="1" nillable="false"/>
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="listAdjustingResponse">
 		<xs:complexContent>
 			<xs:extension base="common:response">
@@ -34,19 +37,19 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="insertAdjustingRequest">
 		<xs:sequence>
 			<xs:element name="adjusting" type="adjusting:adjusting" maxOccurs="1" minOccurs="1" nillable="false" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="updateAdjustingRequest">
 		<xs:sequence>
 			<xs:element name="adjusting" type="adjusting:adjusting" maxOccurs="1" minOccurs="1" nillable="false" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="deleteAdjustingRequest">
 		<xs:sequence>
 			<xs:element name="adjusting" type="adjusting:adjusting" maxOccurs="1" minOccurs="1" nillable="false" />
@@ -54,4 +57,3 @@
 	</xs:complexType>
 
 </xs:schema>
-
