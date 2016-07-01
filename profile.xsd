@@ -27,7 +27,7 @@
 					<xs:element name="expectedFriday" type="xs:string" maxOccurs="1" minOccurs="1" />
 					<xs:element name="expectedSaturday" type="xs:string" maxOccurs="1" minOccurs="1" />
 					<xs:element name="adjustings" type="adjusting:adjusting" maxOccurs="unbounded" nillable="true"/>
-					<xs:element name="reason" type="reason:reason" maxOccurs="unbounded" nillable="true"/>
+					<xs:element name="reasons" type="reason:reason" maxOccurs="unbounded" nillable="true"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
