@@ -19,6 +19,8 @@
 	<xs:complexType name="timeCard">
 		<xs:sequence>
 			<xs:element name="days" type="day:day" maxOccurs="unbounded" nillable="true"/>
+			<xs:element name="totalTime" type="xs:string" maxOccurs="1" minOccurs="1" />
+			<xs:element name="totalTimeMonthly" type="xs:string" maxOccurs="1" minOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -34,39 +36,6 @@
 			<xs:extension base="common:response">
 				<xs:sequence>
 					<xs:element name="timeCard" type="timecard:timeCard" maxOccurs="1" minOccurs="1" nillable="false"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="getTotalTimeRequest">
-		<xs:sequence>
-			<xs:element type="profile:profile" name="profile" maxOccurs="1" minOccurs="1" />
-		</xs:sequence>
-	</xs:complexType>
-	
-	<xs:complexType name="getTotalTimeResponse">
-		<xs:complexContent>
-			<xs:extension base="common:response">
-				<xs:sequence>
-					<xs:element name="totalTime" type="xs:string" maxOccurs="1" minOccurs="1" />
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	
-	<xs:complexType name="getTotalTimeMonthlyRequest">
-		<xs:sequence>
-			<xs:element type="profile:profile" name="profile" maxOccurs="1" minOccurs="1" />
-			<xs:element type="xs:string" name="month" maxOccurs="1" minOccurs="1" />
-		</xs:sequence>
-	</xs:complexType>
-	
-	<xs:complexType name="getTotalTimeMonthlyResponse">
-		<xs:complexContent>
-			<xs:extension base="common:response">
-				<xs:sequence>
-					<xs:element name="totalTimeMonthly" type="xs:string" maxOccurs="1" minOccurs="1" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
